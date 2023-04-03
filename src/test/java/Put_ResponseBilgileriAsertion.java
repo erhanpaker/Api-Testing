@@ -1,10 +1,11 @@
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class ResponseBilgileriAsertion {
+public class Put_ResponseBilgileriAsertion {
 
     @Test
 
@@ -21,8 +22,16 @@ public class ResponseBilgileriAsertion {
         requestBody.put("id",70);
 
 
-        Response response = given().when().put(url);
+        Response response = given().contentType(ContentType.JSON)
+                .when().body(requestBody.toString())
+                 .put(url);
 
+       response
+               .then().assertThat().
+                 statusCode(200)
+               .contentType("application/json; charset=utf-8").
+                header("Server","cloudflare")
+               .statusLine("HTTP/1.1 200 OK");
 
 
     }
