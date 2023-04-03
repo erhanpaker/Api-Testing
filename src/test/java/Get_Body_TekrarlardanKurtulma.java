@@ -16,9 +16,9 @@ public class Get_Body_TekrarlardanKurtulma {
         Response response = given().when().get(url);
 
          response.then().assertThat().statusCode(200).contentType(ContentType.JSON)
-                 .body("firstname", Matchers.equalTo("susan"))
-                 .body("lastname",Matchers.equalTo("Jakson"))
-                 .
+                 .body("firstname", Matchers.equalTo("Sally"))
+                 .body("lastname",Matchers.equalTo("Smith"))
+                 .body("totalprice",Matchers.lessThan(1000));
 
     }
 }
