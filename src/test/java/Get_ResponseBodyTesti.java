@@ -1,5 +1,7 @@
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
@@ -18,7 +20,9 @@ public class Get_ResponseBodyTesti {
                .then()
                .assertThat()
                .statusCode(200)
-               .contentType(ContentType.JSON );
+               .contentType(ContentType.JSON )
+               .body("userId", Matchers.equalTo(5))
+               .body("title",Matchers.equalTo("optio dolor molestias sit"));
 
     }
 }
