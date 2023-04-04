@@ -20,5 +20,8 @@ public class Get_Body_TekrarlardanKurtulma {
                  .body("lastname",Matchers.equalTo("Smith"))
                  .body("totalprice",Matchers.lessThan(1000));
 
+
+
+
     }
 }
