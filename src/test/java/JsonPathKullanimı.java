@@ -36,7 +36,9 @@ public class JsonPathKullanimı {
         kisibilgileriJsonobj.put("adress",adresJsonObj);
         kisibilgileriJsonobj.put("phoneNumbers",telofonBilgileriArr);
 
-        System.out.println(kisibilgileriJsonobj);
+        System.out.println("firstname :"+kisibilgileriJsonobj.get("firstname"));
+        System.out.println("lastname: "+kisibilgileriJsonobj.get("lastname"));
+
 
 
 
