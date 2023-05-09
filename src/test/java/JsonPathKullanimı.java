@@ -39,6 +39,11 @@ public class JsonPathKullanimı {
         System.out.println("firstname :"+kisibilgileriJsonobj.get("firstname"));
         System.out.println("lastname: "+kisibilgileriJsonobj.get("lastname"));
 
+        System.out.println("cadde" + kisibilgileriJsonobj.getJSONObject("adress")
+                .get("streetAddress"));
+
+
+
 
 
 
