@@ -41,6 +41,9 @@ public class c13 {
         JsonPath responseJsonPath = response.jsonPath();
 
         Assert.assertEquals(expectedData.get("id"),responseJsonPath.get("id"));
+        Assert.assertEquals(expectedData.get("title"),responseJsonPath.get("title"));
+        Assert.assertEquals(expectedData.get("body"),responseJsonPath.get("body"));
+        Assert.assertEquals(expectedData.get("userId"),responseJsonPath.get("userId"));
 
 
 
