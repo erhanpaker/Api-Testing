@@ -1,7 +1,10 @@
 package test;
 
+import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Test;
+
+import static io.restassured.RestAssured.given;
 
 public class Api_GetRequest {
 
@@ -15,6 +18,10 @@ public class Api_GetRequest {
 
         expBody.put("userId",5);
         expBody.put("title","optio dolor molestias sit");
+
+        Response response = given().when().get(url);
+
+        response.prettyPrint();
 
 
     }
