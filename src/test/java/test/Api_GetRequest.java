@@ -34,8 +34,6 @@ public class Api_GetRequest {
         Assert.assertEquals(expBody.get("userId"),actBody.get("userId"));
         Assert.assertEquals(expBody.get("title"),actBody.get("title"));
 
-
-
-
+        
     }
 }
