@@ -13,6 +13,10 @@ public class c15 {
         JSONObject dataBilgileriJson = new JSONObject();
 
         dataBilgileriJson.put("id",3);
+        dataBilgileriJson.put("employee_name","Ahston Cox");
+        dataBilgileriJson.put("enployess_salary",86000);
+        dataBilgileriJson.put("employee_age",66);
+        dataBilgileriJson.put("profile_image","");
 
     }
 }
