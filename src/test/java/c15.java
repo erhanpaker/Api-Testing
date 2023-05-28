@@ -38,6 +38,21 @@ public class c15 {
 
         SoftAssert softAssert = new SoftAssert();
 
+        softAssert.assertEquals(responseJsonpath.get("status"),expectedData);
+        softAssert.assertEquals(responseJsonpath.get("message"),expectedData);
+        softAssert.assertEquals(responseJsonpath.get("data.id"),
+                expectedData.getJSONObject("data").get("id"));
+
+        softAssert.assertEquals(responseJsonpath.get("data.id"),
+                expectedData.getJSONObject("data").get("id"));
+        softAssert.assertEquals(responseJsonpath.get("data.emloyee_name"),
+                expectedData.getJSONObject("data").get("data.emloyee_name"));
+        softAssert.assertEquals(responseJsonpath.get("data.id"),
+                expectedData.getJSONObject("data").get("id"));
+        softAssert.assertEquals(responseJsonpath.get("data.id"),
+                expectedData.getJSONObject("data").get("id"));
+
+
 
 
 
